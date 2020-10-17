@@ -31,13 +31,18 @@ svg {
 }
 
 .dot {
- -webkit-animation: run 2s infinite ease-in-out forwards;
   animation: run 1s 1 ease-in-out forwards;
+  -webkit-animation: run 1s 1 ease-in-out forwards;
+  -moz-animation: run 1s 1 ease-in-out forwards;
+  -o-animation: run 1s 1 ease-in-out forwards;
 }
 
 .line {
   stroke-dasharray: 1000;
   animation: line 2s linear;
+  -webkit-animation: line 2s linear;
+  -moz-animation: line 2s linear;
+  -o-animation: line 2s linear;
 }
 
 @keyframes line {
@@ -49,7 +54,61 @@ svg {
   }
 }
 
+@-webkit-keyframes line {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-moz-keyframes line {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-o-keyframes line {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 @keyframes run {
+  from {
+    r: 0;
+  }
+  to {
+    r: 5px;
+  }
+}
+
+@-webkit-keyframes run {
+  from {
+    r: 0;
+  }
+  to {
+    r: 5px;
+  }
+}
+
+@-moz-keyframes run {
+  from {
+    r: 0;
+  }
+  to {
+    r: 5px;
+  }
+}
+
+@-o-keyframes run {
   from {
     r: 0;
   }
